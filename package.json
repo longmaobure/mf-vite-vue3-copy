@@ -1,0 +1,11 @@
+{
+  "name": "mf-vite-vue3-copy",
+  "version": "1.0.0",
+  "description": "模块联邦 vite+vue3 例子仿写",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
