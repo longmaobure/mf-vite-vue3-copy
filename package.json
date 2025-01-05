@@ -4,8 +4,17 @@
   "description": "模块联邦 vite+vue3 例子仿写",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run:remote": "pushd remote && npm run dev && popd",
+    "run:host": "pushd host && npm run dev && popd",
+    "run:all": "run-p run:remote run:host",
+    
+    "install:remote":"pushd remote && npm install && popd",
+    "install:host":"pushd nost && npm install && popd",
+    "install:all":"run-p "
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
