@@ -1,5 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent } from 'vue';
+const RemoteMFE = defineAsyncComponent(()=>import('remote/remote-app'))
 </script>
 
 <template>
@@ -12,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <RemoteMFE/>
 </template>
 
 <style scoped>
