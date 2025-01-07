@@ -32,7 +32,7 @@
               }
             },
             shareConfig: {
-              singleton: false,
+              singleton: true,
               requiredVersion: "^3.5.13"
             }
           }

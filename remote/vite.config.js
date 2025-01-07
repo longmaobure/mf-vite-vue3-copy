@@ -18,7 +18,15 @@ export default defineConfig({
       './remote-app': "./src/App.vue"
     },
     // 共享vue 和 pinia 依赖
-    shared: ["vue", 'pinia']
+    shared: {
+      vue: {
+        // 确保只加载一个 Vue 实例
+        singleton: true
+      },
+      pinia:{
+        singleton:true
+      }
+    },
 
   }), vue(), vueJsx()],
 })
