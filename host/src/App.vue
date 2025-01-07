@@ -1,20 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue';
 import { defineAsyncComponent } from 'vue';
-const RemoteMFE = defineAsyncComponent(()=>import('remote/remote-app'))
+const RemoteMFE = defineAsyncComponent(()=>import('remote/remote-app'));
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div>
+      <h1>host component</h1>
+      <Counter />
+    </div>
+    <RemoteMFE />
   </div>
-  <HelloWorld msg="Vite + Vue" />
-  <RemoteMFE/>
 </template>
 
 <style scoped>
@@ -24,9 +21,11 @@ const RemoteMFE = defineAsyncComponent(()=>import('remote/remote-app'))
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

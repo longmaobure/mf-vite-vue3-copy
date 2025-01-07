@@ -23,6 +23,7 @@ export default defineConfig({
         singleton: true
       },
       pinia:{
+        // 只加载一个 pinia 实例可以实现状态共享
         singleton:true
       }
     },
